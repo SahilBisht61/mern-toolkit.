@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+  font-family: "nunito";
+}
+
+.toolkit-container {
+  width: 518px;
+  /* height: 237px; */
+  border-radius: 19px;
+
+  border: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 72px 64px 24px;
+  cursor: default;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  font-size: 36px;
+  font-weight: 600;
+  position: relative;
+}
+
+.icon-1 {
+  color: Green;
+}
+.icon-2 {
+  color: white;
+}
+.icon-3 {
+  color: rgba(67, 157, 241, 0.962);
+}
+.icon-4 {
+  color: greenyellow;
+}
+
+.icon img {
+  position: relative;
+  z-index: 10;
+}
+
+.toolkit {
+  font-size: 13px;
+  color: black;
+  position: absolute;
+  top: 16px;
+  background-color: rgba(71, 162, 72, 1);
+  padding: 8px 14px;
+  border-radius: 24px;
+  margin-left: -5px;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    opacity 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  opacity: 0;
+}
+.toolkit::after {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  background-color: rgba(71, 162, 72, 1);
+  transform: rotate(45deg) translateX(-50%);
+  left: 50%;
+  bottom: -12px;
+  z-index: -1;
+  background-color: inherit;
+}
+
+.mongoDB {
+  background-color: rgba(71, 162, 72, 1);
+  color: aliceblue;
+}
+
+.Express {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.React {
+  background-color: rgba(97, 218, 251, 1);
+}
+
+.Node {
+  background-color: rgba(140, 200, 75, 1);
+}
+
+.icon:hover .toolkit {
+  top: -48px;
+  opacity: 1;
+}
+
+
+@media(max-width:600px){
+.toolkit-container{
+    padding-inline:16px;
+}}
